@@ -13,5 +13,6 @@ public class Node {
 
     public void addChild(Node child) {
         this.children.add(child);
+        child.parent = this;
     }
 }
