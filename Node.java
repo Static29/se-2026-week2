@@ -17,6 +17,7 @@ public class Node {
         this.children.add(child);
         child.parent = this;
     }
+
     // 현재 노드에 자식노드가 있는지 확인하는 메서드
     public boolean hasChild() {
         return !this.children.isEmpty();
@@ -37,7 +38,7 @@ public class Node {
             return maxHeight + 1;
         }
     }
-
+    // bfs 
     public void bfs(String targetLabel) {
         Queue<Node> queue = new ArrayDeque<>();
         List<String> visitedOrder = new ArrayList<>();
@@ -80,6 +81,19 @@ public class Node {
         }
 
         System.out.println("Not found " + targetLabel);
+    }
+  
+    // dfs 메서드 
+    public static void dfs(Node node) {
+      System.out.println(node.label);
+
+      if (!node.hasChild()) {
+         return;
+       }
+
+      for (Node child : node.children) {
+        dfs(child);
+      }
     }
 
 }
