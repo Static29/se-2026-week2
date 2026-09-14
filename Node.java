@@ -86,7 +86,7 @@ public class Node {
   
     // dfs 메서드 
     public static void dfs(Node node) {
-      System.out.println(node.label);
+      System.out.print(node.label + " ");
 
       if (!node.hasChild()) {
          return;
