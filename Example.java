@@ -28,8 +28,13 @@ public class Example {
         child6.addChild(child7);
 
         //BFS 실행 테스트
+        System.out.println("BFS 방문 순서:");
         root.bfs("none");  // "Child 7"을 찾기 위해 BFS 실행
         root.bfs("Child 7");  // "Child 7"을 찾기 위해 BFS 실행
+
+        //DFS 실행 테스트
+        System.out.println("DFS 방문 순서:");
+        Node.dfs(root);
 
     }
 }

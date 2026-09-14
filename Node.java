@@ -38,7 +38,8 @@ public class Node {
             return maxHeight + 1;
         }
     }
-    // bfs 
+
+    // bfs 메서드 
     public void bfs(String targetLabel) {
         Queue<Node> queue = new ArrayDeque<>();
         List<String> visitedOrder = new ArrayList<>();
